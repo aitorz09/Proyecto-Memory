@@ -14,42 +14,78 @@
     opacity: 0.9;
     top: 0px;
     z-index: -1;
-    
 }
 body{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    
     font-family: "Fontdiner Swanky", serif;
 }
 /* GAME */
 .juego{
+    border: 2px solid red;
     width: 100%;
     height: 100%;
-    
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    .h2{
-        font-size:3rem;
-        text-shadow: 0 0 .5px .5px white;
+    font-size:10vw;
+    .info{
+        height: 20vh;
+        border: 2px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .h2{
+            font-size:38px;
+            /* text-shadow: 0 0 .5px .5px white; */
+            text-align: center;
+            border: 2px solid red;
+        }
+        .contador{
+            font-size:38px;
+            border: 2px solid red;
+        }
+    }
+    .game{
+        width: 90vw;
+        height: 70%;
+        display: grid;
+        /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+        grid-template-columns: repeat(4, minmax(60px, 1fr));
+        /* justify-content: center; */
+        border: 2px solid blue;
+        /* justify-items: center;
+        align-items: center; */
+        gap: 15px;
+
+        .card{
+            display: flex;
+
+            cursor: pointer;
+            transition: transform 1s ease;
+            background-color: rgba(76, 10, 114, 0.829);
+            border-radius: 10px;
+            box-shadow: 0 0 .7rem .5rem rgb(0, 0, 0);
+            user-select: none;
+
+            div{
+                background-color: aquamarine;
+                height: 100%;
+                width: 100%;
+            }
+        }
     }
 }
-.juego div:last-child{
+/* .juego div:first-child{
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 3rem;
     text-shadow: 0 0  1rem  #bd53d8;
-}
-.game{
-    display: flex;
-    flex-wrap: wrap;
-    width: 600px;
-    height:80vh;
-    justify-content: center;
-}
+} */
+
 .result{
     width: 100%;
     height: 100%;
@@ -84,46 +120,30 @@ body{
     animation: vibration 0.3s infinite alternate;
 }
 /* CARDS */
-.card{
-    display: flex;
-    width: 21%;
-    height: 20%;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 1s ease;
-    background-color: rgba(76, 10, 114, 0.829);
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 .7rem .5rem rgb(0, 0, 0);
-    user-select: none;
-    draggable: false;
-}
-img{
-    width: 100%;
-    height: 100%;
+
+/* img{
     display: none;
     border-radius: 10px;
-    
-}
+} */
 p{
     font-size: 6rem;
     font-style: none;
     display: inherit ;
-    
+    width: 100%;
+    height: 100%;
 }
 .tapada>img{
-    display: inherit;
+    display: none;
+    max-width: 100%;
+    max-height: 100%;
 }
 .tapada>p{
     display: none;
 }
 /* ANIMATION */
-.tapada{
-    
-    transform: rotateY(180deg);
-    
-}
+/* .tapada{
+    transform: rotateY(180deg);  
+} */
 .inicio{
     width: 100%;
     height: 100%;
@@ -155,7 +175,7 @@ p{
     }
 }
 
-@media(width > 1000px){
+/* @media(width > 1000px){
     .game{
         width: 1000px;
         height: 40vh;
@@ -169,7 +189,7 @@ p{
     img{
         
     }
-}
+} */
 .hidden{
     display: none;
 }

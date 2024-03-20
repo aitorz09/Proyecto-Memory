@@ -32,10 +32,16 @@ const prepararCartas = ()=>{
         game.innerHTML+=
         `
         <div class="card tapada" data="${emoticono}" draggable=${false} id="${idx}">
-        <img src="./a39b5e71f4218f37cac9dcb0474c0850.jpg">
-        <p>${emoticono}</p>
+            <img src="./a39b5e71f4218f37cac9dcb0474c0850.jpg">
+            <p>${emoticono}</p>
         </div>
         `
+        // game.innerHTML+=
+        // `
+        // <div class="card tapada" data="${emoticono}" draggable=${false} id="${idx}">
+        //     <div>C</div>
+        // </div>
+        // `
     })
     cards = document.querySelectorAll(".card")
     cards.forEach(card => {
