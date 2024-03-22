@@ -10,7 +10,7 @@ const inicio = document.querySelector(".inicio")
 const juego = document.querySelector(".juego")
 const result = document.querySelector(".result")
 const startAgain = document.querySelector(".startAgain")
-const Emoticonos = ["🐒","🦍","🦧","🐕‍🦺","🐩","🦊","🦝","🐈"];
+const Emoticonos = ["🎃","💀","👻","🕷️","🕸️","🍬","🍫","🧛‍♂️"];
 const audio = document.querySelector(".audio")
 // FUNCTIONS
 const random = (array)=> {
@@ -30,7 +30,7 @@ const prepararCartas = ()=>{
         `
         <div class="card tapada" data="${emoticono}" draggable=${false} id="${idx}">
         <img src="./a39b5e71f4218f37cac9dcb0474c0850.jpg">
-            <p>${emoticono}</p>
+            <p class="">${emoticono}</p>
         </div>
         `
         

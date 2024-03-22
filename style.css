@@ -143,7 +143,7 @@ p{
     align-items: center;
     .h1 {
         text-align: center;
-        font-size: 50px;
+        font-size: 70px;
         background: linear-gradient(to top, rgba(4,4,4,1) 3%, rgb(139, 118, 145) 51%, rgba(9,9,9,1) 100%); 
         -webkit-background-clip: text; 
         color: transparent;
@@ -151,17 +151,17 @@ p{
     .start{
         padding: 2rem;
         font-family: inherit;
-        font-size: 2rem;
+        font-size: 3rem;
         border: none;
         background: none;
         cursor: pointer;
         transition: transform 300ms ease;
+        animation: vibration 0.4s infinite alternate;
     }
     .start:hover{
         background: linear-gradient(to top, rgba(4,4,4,1) 3%, rgb(139, 118, 145) 51%, rgba(9,9,9,1) 100%); 
         -webkit-background-clip: text; 
         color: transparent;
-        animation: vibration 0.3s infinite alternate;
     }
 }
 .hidden{
@@ -194,19 +194,13 @@ p{
     }
 }
 @keyframes vibration {
+   
     0% {
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(2px);
-    }
-    50% {
-        transform: translateY(0);
-    }
-    75% {
-        transform: translateY(-2px);
+        transform: translateY(3px);
+    
     }
     100% {
-        transform: translateY(0);
+        transform: translateY(-3px);
     }
+   
 }
