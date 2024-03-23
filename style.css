@@ -102,12 +102,13 @@ body{
     background: none;
     cursor: pointer;
     transition: transform 300ms ease;
+    animation: vibration 0.3s infinite alternate;
 }
 .startAgain:hover{
     background: linear-gradient(to top, rgba(4,4,4,1) 3%, rgb(139, 118, 145) 51%, rgba(9,9,9,1) 100%); 
     -webkit-background-clip: text; 
     color: transparent;
-    animation: vibration 0.3s infinite alternate;
+    
 }
 /* CARDS */
 
@@ -188,9 +189,7 @@ p{
         }
     }
     .card{
-        p{
-            font-size: 5rem;
-        }
+        font-size: 2rem;
     }
 }
 @keyframes vibration {
@@ -204,3 +203,39 @@ p{
     }
    
 }
+/* .card {
+    perspective: 1000px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.tapada {
+    transform: rotateY(180deg);
+}
+.card img, .card p {
+    backface-visibility: hidden;
+}
+body{
+    background: linear-gradient(to bottom, hsl(214, 47%, 73%), hsl(237, 49%, 85%)); 
+    position: relative;
+}
+.dark_mode {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    .p{
+        font-size: 40px;
+        position: absolute;
+        right: 0;
+        padding: 1rem;
+        margin-right: 2rem;
+        cursor: pointer;
+    }
+}
+.colorLightMode{
+    background: linear-gradient(to bottom, hsl(214, 47%, 73%), hsl(237, 49%, 85%))
+}
+.colorDarkMode{
+    background: linear-gradient(to bottom, hsl(214, 47%, 23%), hsl(237, 49%, 15%)); 
+} */
