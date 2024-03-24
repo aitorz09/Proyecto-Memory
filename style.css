@@ -130,7 +130,7 @@ p{
 .tapada>p{
     display: none;
 }
-/* ANIMATION */
+
 .tapada{
     transform: rotateY(180deg);  
 }
@@ -165,6 +165,7 @@ p{
         color: transparent;
     }
 }
+/* DIPLAY HIDDEN */
 .hidden{
     display: none;
 }
@@ -192,6 +193,7 @@ p{
         font-size: 2rem;
     }
 }
+/* ANIMACION */
 @keyframes vibration {
    
     0% {
@@ -203,7 +205,8 @@ p{
     }
    
 }
-/* .card {
+/* EFECTO 3D / ICONO DARK MODE */
+.card {
     perspective: 1000px;
     transition: transform 1s;
     transform-style: preserve-3d;
@@ -222,7 +225,7 @@ body{
 .dark_mode {
     display: flex;
     position: absolute;
-    top: 70px;
+    top: 90px;
     right: 10px;
     .p{
         font-size: 40px;
@@ -238,4 +241,4 @@ body{
 }
 .colorDarkMode{
     background: linear-gradient(to bottom, hsl(214, 47%, 23%), hsl(237, 49%, 15%)); 
-} */
+}

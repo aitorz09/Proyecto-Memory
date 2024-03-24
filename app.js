@@ -12,8 +12,8 @@ const result = document.querySelector(".result")
 const startAgain = document.querySelector(".startAgain")
 const Emoticonos = ["🎃","💀","👻","🕷️","🕸️","🍬","🍫","🧛‍♂️"];
 const audio = document.querySelector(".audio")
-// const body = document.querySelector("body")
-// const buttons = document.querySelector("button")
+const body = document.querySelector("body")
+const buttons = document.querySelector("button")
 // FUNCTIONS
 const random = (array)=> {
     for (let i = array.length - 1; i > 0; i--) {
@@ -31,10 +31,10 @@ const prepararCartas = ()=>{
         game.innerHTML+=
         `
         <div class="card tapada" data="${emoticono}" draggable=${false} id="${idx}">
-            <img src="./a39b5e71f4218f37cac9dcb0474c0850.jpg">
-         <p class="">${emoticono}</p>
+        <p class="">${emoticono}</p>
         </div>
         `
+        // <img src="./a39b5e71f4218f37cac9dcb0474c0850.jpg">
         // Subir o bajar imagen para que se vea el efecto 3d
         
     })
@@ -120,10 +120,10 @@ startBtn.addEventListener('click',()=>{
     juego.classList.toggle("hidden")
      prepararCartas()
 })
-// const iconDarkMode = document.querySelector(".fa-moon")
-// iconDarkMode.addEventListener('click',()=>{
-//     body.classList.toggle("colorLightMode")
-//     body.classList.toggle("colorDarkMode")
-// })
+const iconDarkMode = document.querySelector(".fa-moon")
+iconDarkMode.addEventListener('click',()=>{
+    body.classList.toggle("colorLightMode")
+    body.classList.toggle("colorDarkMode")
+})
 
 
